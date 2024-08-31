@@ -23,7 +23,7 @@ public class Fila<T>{
         }
     }
     
-    public desenfileirar(){
+    public void desenfileirar(){
         if(primeiroNo == null){
             System.out.println("Fila Vazia");
             return null;
@@ -43,12 +43,12 @@ public class Fila<T>{
         if(primeiroNo == null){
             System.out.println("Fila vazia!");
         }else{
-            System.out.println("Dados da fila"+ this.nomefila);
+            System.out.println("Dados da fila" + nomefila);
 
             No<T> aux = primeiroNo;
 
             while(aux != null){
-                System.out.printf("-%s\n", aux.getDado());
+                System.out.printf("{" + aux.getDado() + "}");
                 aux = aux.getNextNo();
             }
         }

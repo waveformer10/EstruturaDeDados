@@ -1,14 +1,15 @@
 public class Principal{
     public static void main(String[] args){
-        System.out.println("=== Testeando fila ===");
-        Fila<String> fila = new Fila<String>("Letras");
-        fila.enfileirar("A");
-        fila.imprimiFila();
+        System.out.println("=== Tetando Pilha ===");
+        Pilha<String> pilha = new Pilha<String>("letras");
 
-        fila.enfileirar("B");
-        fila.imprimiFila();
+        pilha.push("A");
+        pilha.push("B");
+        pilha.push("C");
+        pilha.imprimePilha();
 
-        fila.desenfileirar();
-        fila.imprimiFila();
+        System.out.println("Topo da pilha: " + pilha.peek());
+        System.out.println("Elemento Removido: " + pilha.pop()); 
+        pilha.imprimePilha();
     }
 }
