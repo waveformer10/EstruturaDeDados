@@ -9,6 +9,13 @@ public class Principal{
         lista.imprimeLista();
         lista.addFinal("Batata");
         lista.imprimeLista();
+        lista.addFinal("Jorge");
+        lista.imprimeLista();
+
+        lista.removeInicio();
+        lista.imprimeLista();
+        lista.removeFinal();
+        lista.imprimeLista();
     }
 
 }
