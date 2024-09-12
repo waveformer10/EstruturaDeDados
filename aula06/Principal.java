@@ -12,6 +12,12 @@ public class Principal{
         lista.addFinal("Jorge");
         lista.imprimeLista();
 
+        lista.addMeio("Pedro", 2);
+        lista.imprimeLista();
+
+        lista.removeMeio(2);
+        lista.imprimeLista();
+
         lista.removeInicio();
         lista.imprimeLista();
         lista.removeFinal();
