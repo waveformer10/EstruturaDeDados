@@ -3,14 +3,14 @@ public class Principal{
         Lista<String> lista = new Lista<String>("Alunos");
 
         lista.addInicio("Marcelo");
-        lista.imprimeDados();
+        lista.imprimeLista();
         lista.addInicio("Ba");
-        lista.imprimeDados();
+        lista.imprimeLista();
         lista.addFinal("BU");
-        lista.imprimeDados();
+        lista.imprimeLista();
         lista.removeInicio();
-        lista.imprimeDados();
+        lista.imprimeLista();
         lista.removeFinal();
-        lista.imprimeDados();
+        lista.imprimeLista();
     }
 }

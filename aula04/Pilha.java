@@ -1,4 +1,5 @@
 public class Pilha<T>{
+    private No<T> topo;
     private String nomePilha;
 
     public Pilha(){
@@ -11,14 +12,14 @@ public class Pilha<T>{
     }
 
     public void push(T dado){
-        No<T> novoNo = new No<T>(dado);
+        No<T> novoNo = new No<T> (dado);
         novoNo.setNextNo(topo);
         topo = novoNo;
     }
 
     public T peek(){
         if(topo == null){
-            Sysytem.out.println("Pilha Vazia");
+            System.out.println("Pilha Vazia");
             return null;
         }
         return topo.getDado();
@@ -26,7 +27,7 @@ public class Pilha<T>{
 
     public T pop(){
         if(topo == null){
-            Sysytem.out.println("Pilha Vazia");
+            System.out.println("Pilha Vazia");
             return null;
         }
         T dadoTemp = topo.getDado();

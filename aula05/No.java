@@ -1,11 +1,11 @@
 class No<T>{
 
     private T dado;
-    private No<T> aux;
+    private No<T> nextNo;
 
     public No(T dado){
         this.dado = dado;
-        this.aux = null;
+        this.nextNo = null;
     }
 
     public void setDado(T dado){
@@ -16,15 +16,16 @@ class No<T>{
         return this.dado;
     }
 
-    public void setNextAux(No<T> aux){
-        this.aux = aux;
+    public void setNextNo(No<T> nextNo){
+        this.nextNo = nextNo;
     }
 
-    public No<T> getNextNode(){
+    public No<T> getNextNo(){
         return this.nextNo;
     }
 
-    public String imprimeDados(){
+    @Override
+    public String toString(){
         return "{Dado : " + getDado() + "}";
     }
 

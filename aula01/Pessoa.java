@@ -25,10 +25,6 @@ public class Pessoa{
 
     @Override
     public String toString(){
-        //Concatenacao de Strings
-        //return "Pessoa{Nome: " + getNome() +", Idade:" + getIdade() +"}";
-
-        //Interpolacao de Strings
         return String.format("Pessoa{Nome %s, Idade: %d}", getNome(), getIdade());
     }
 

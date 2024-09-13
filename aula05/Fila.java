@@ -13,23 +13,23 @@ public class Fila<T>{
         this.ultimoNo = null;
     }
 
-    public enfileirar(T dado){
+    public void enfileirar(T dado){
         No<T> novoNo = new No<T>(dado);
-        if(ultimoNo = null){
+        if(ultimoNo == null){
             ultimoNo = primeiroNo = novoNo;
         }else{
-            ultimoNo.setNextNo(NovoNo);
+            ultimoNo.setNextNo(novoNo);
             ultimoNo = novoNo;
         }
     }
     
-    public void desenfileirar(){
+    public T desenfileirar(){
         if(primeiroNo == null){
             System.out.println("Fila Vazia");
             return null;
         }
 
-        T dado = primeiro.getDado();
+        T dadoTemp = primeiroNo.getDado();
         primeiroNo = primeiroNo.getNextNo();
 
         if(primeiroNo == null){
@@ -43,13 +43,13 @@ public class Fila<T>{
         if(primeiroNo == null){
             System.out.println("Fila vazia!");
         }else{
-            System.out.println("Dados da fila" + nomefila);
+            System.out.println("Dados da fila", nomefila);
 
-            No<T> aux = primeiroNo;
+            No<T> nextNo = primeiroNo;
 
-            while(aux != null){
-                System.out.printf("{" + aux.getDado() + "}");
-                aux = aux.getNextNo();
+            while(nextNo != null){
+                System.out.printf("{" + nextNo.getDado() + "}");
+                nextNo = nextNo.getNextNo();
             }
         }
     }

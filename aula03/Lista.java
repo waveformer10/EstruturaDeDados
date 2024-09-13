@@ -19,7 +19,7 @@ class Lista<T>{
             primeiroNo = novoNo;
             ultimoNo = novoNo;
         }else{
-            novoNo.setAux(primeiroNo);
+            novoNo.setNextNo(primeiroNo);
             primeiroNo = novoNo;
         }
     }
@@ -29,23 +29,8 @@ class Lista<T>{
         if(ultimoNo == null){
             primeiroNo = ultimoNo = novoNo;
         }else{
-            ultimoNo.setAux(novoNo);
+            ultimoNo.setNextNo(novoNo);
             ultimoNo = novoNo;
-        }
-    }
-    
-    public void imprimeDados(){
-        if(primeiroNo == null){
-            System.out.println("Lista vazia!");
-        }else{
-            System.out.printf("Dados da lista %s:\n,nomeLista");
-
-            No<T> noImprime = primeiroNo;
-
-            while(noImprime != null){
-                System.out.printf("{%s}\n", noImprime.getDado());
-                noImprime = noImprime.getAux();
-            }
         }
     }
 
@@ -53,8 +38,8 @@ class Lista<T>{
         if(primeiroNo == null){
             System.out.println("Lista vazia!");
         }else{
-            System.out.printf("Dado: {%s} foi removido da lista.", primeiroNo.getDado());
-            primeiroNo = primeiroNo.getAux();
+            System.out.printf("Dado: %s foi removido da lista.", primeiroNo.getDado());
+            primeiroNo = primeiroNo.getNextNo();
         }
     }
 
@@ -62,15 +47,30 @@ class Lista<T>{
         if(primeiroNo == null){
             System.out.println("Lista Vazia!");
         }else{
-            System.out.printf("Dados: {%s} foi removido da lista", ultimoNo.getDados());
+            System.out.printf("Dados: " + ultimoNo.getDado() + " removido da Lista");
 
             No<T> noRemove = primeiroNo;
 
-            while(noRemove.getAux() != ultimoNo){
-                noRemove = noRemove.getAux();
+            while(noRemove.getNextNo() != ultimoNo){
+                noRemove = noRemove.getNextNo();
             }
             ultimoNo = noRemove;
-            noRemove.setAux(null);
+            noRemove.setNextNo(null);
+        }
+    }
+
+    public void imprimeLista(){
+        if(primeiroNo == null){
+            System.out.println("Lista vazia!");
+        }else{
+            System.out.printf("Dados da lista %s:\n", nomeLista);
+
+            No<T> aux = primeiroNo;
+
+            while(aux != null){
+                System.out.printf("{%s}\n", aux.getDado());
+                aux = aux.getNextNo();
+            }
         }
     }
 }
