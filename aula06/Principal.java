@@ -3,21 +3,15 @@ public class Principal{
     public static void main(String[] args){
         ListaDupla<String> lista = new ListaDupla<String>("Alunos");
         lista.imprimeLista();
-        lista.addInicio("Marcelo");
+        lista.addInicio("R");
+        lista.addInicio("M");
         lista.imprimeLista();
-        lista.addInicio("Ba");
+        lista.addFinal("G");
         lista.imprimeLista();
-        lista.addFinal("Batata");
+        lista.addMeio("P", 2);
         lista.imprimeLista();
-        lista.addFinal("Jorge");
+        lista.removeMeio(1);
         lista.imprimeLista();
-
-        lista.addMeio("Pedro", 2);
-        lista.imprimeLista();
-
-        lista.removeMeio(2);
-        lista.imprimeLista();
-
         lista.removeInicio();
         lista.imprimeLista();
         lista.removeFinal();
